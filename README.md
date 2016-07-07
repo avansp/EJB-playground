@@ -12,3 +12,4 @@ This is my sandbox to learn Enterprise Java Beans using JBoss application server
 # Some pointers:
 
 * [Installing JBoss Tools in Eclipse IDE for JBoss As 7.1.0.Final](http://www.javaguru.biz/installing-jboss-tools-in-eclipse-ide-for-jboss-as-7-1-0-final/)
+* [EJB Tutorial](http://www.ejbtutorial.com/)

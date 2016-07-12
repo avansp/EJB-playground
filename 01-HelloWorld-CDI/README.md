@@ -113,16 +113,16 @@ CDI is context and data injection, where we don't have to specify naming context
 Preparing your project for Java bean with CDI:
 
 1. Open your project settings.
-   1. Select **Project Facets**
-   1. Enable "CDI (Contexts and Dependency Injection)"
-   1. Click **Apply**
-   1. Select "CDI (Contexts and Dependency Injection)" menu item on the left.
-   1. Make sure that CDI support is checked.
-   1. Click **OK**
+   * Select **Project Facets**
+   * Enable "CDI (Contexts and Dependency Injection)"
+   * Click **Apply**
+   * Select "CDI (Contexts and Dependency Injection)" menu item on the left.
+   * Make sure that CDI support is checked.
+   * Click **OK**
 1. Create `beans.xml`:
-   1. From your project: New -> beans.xml file.
-   1. Open folder WebContent -> WEB-INF -> beans.xml
-   1. Set property `bean-discovery-made="all"`.
+   * From your project: New -> beans.xml file.
+   * Open folder WebContent -> WEB-INF -> beans.xml
+   * Set property `bean-discovery-made="all"`.
 
 Note that beans must be associated with a name before it can be discovered. At the moment, we set it as `all` to allow discovering all beans.
 
@@ -147,18 +147,18 @@ The idea is to call `getHelloMessage` method from the servlet with CDI.
 
 Modify `HelloServlet`:
 
-1. Import Inject package:
+* Import Inject package:
 ```java
 import javax.inject.Inject;
 ```
 
-1. Inside `HelloServlet` class, insert the injection:
+* Inside `HelloServlet` class, insert the injection:
 ```java
 @Inject
 HelloService helloService;
 ```
 
-1. Modify `doGet` method:
+* Modify `doGet` method:
 ```java
 protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

@@ -94,7 +94,7 @@ public class HelloServlet extends HttpServlet {
 }
 ```
 
-Open http://127.0.0.1:8080/helloworld-cdi/my-servlet
+Re-deploy and open http://127.0.0.1:8080/helloworld-cdi/my-servlet
 
 ![helloworld-servlet.png](figs/helloworld-servlet.png)
 
@@ -104,7 +104,7 @@ Note that the URL is `/helloworld-cdi/my-servlet`. If you open `/helloworld-cdi`
 ```
 to the header of `index.html` file.
 
-Now open http://127.0.0.1:8080/helloworld-cdi.
+Re-deploy and open http://127.0.0.1:8080/helloworld-cdi.
 
 ## Add a web bean using CDI
 
@@ -177,6 +177,6 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
 }
 ```
 
-Open again http://127.0.0.1:8080/helloworld-cdi
+* Re-deploy and open http://127.0.0.1:8080/helloworld-cdi
 
 ![helloworld-bean.png](figs/helloworld-bean.png)

@@ -20,7 +20,7 @@ From your Eclipse Neon:
 
 This registers your URL to `http://127.0.0.1:8080/helloworld-cdi`.
 
-You need to create `index.html` file as a template under the `WebContent` folder. Without this file, you will see *403 Forbidden* message if you open the root URL.
+You need to create `index.html` file as a template under the `WebContent` folder. Without this file, you will see *403 Forbidden* message if you open the URL.
 
 * Right-click your project -> New -> HTML file
 * Select WebContent folder and create `index.html`
@@ -47,14 +47,14 @@ You need to create `index.html` file as a template under the `WebContent` folder
 
 ## Adding a servlet
 
-We are going to create a servlet that dynamically change a webpage.
+We are going to create a servlet that dynamically change a webpage. Before that, we need to create a package:
 
-Before that, we need to create a package:
 1. New -> Java package
 1. Name: `io.github.avansp.ejb`
 1. Click **Finish**.
 
 Create a servlet:
+
 1. New -> Servlet
 1. Java package: browse to the new created package.
 1. Class name: `HelloServlet`
@@ -106,13 +106,12 @@ to the header of `index.html` file.
 
 Now open http://127.0.0.1:8080/helloworld-cdi.
 
-Another solution, if your application is the root context, is by renaming the WAR file into `ROOT.war`.
-
 ## Add a web bean using CDI
 
 CDI is context and data injection, where we don't have to specify naming context manually for a Java bean.
 
 Preparing your project for Java bean with CDI:
+
 1. Open your project settings.
    1. Select **Project Facets**
    1. Enable "CDI (Contexts and Dependency Injection)"
@@ -128,6 +127,7 @@ Preparing your project for Java bean with CDI:
 Note that beans must be associated with a name before it can be discovered. At the moment, we set it as `all` to allow discovering all beans.
 
 Create a very simple `HelloService` class that contains a method to get a string:
+
 1. New -> Class
 1. Name: `HelloService`
 
@@ -146,15 +146,18 @@ public class HelloService {
 The idea is to call `getHelloMessage` method from the servlet with CDI.
 
 Modify `HelloServlet`:
+
 1. Import Inject package:
 ```java
 import javax.inject.Inject;
 ```
+
 1. Inside `HelloServlet` class, insert the injection:
 ```java
 @Inject
 HelloService helloService;
 ```
+
 1. Modify `doGet` method:
 ```java
 protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

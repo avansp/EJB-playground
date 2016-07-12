@@ -9,6 +9,7 @@ This project shows you how to develop it from scratch using Eclipse Neon and Wil
 ## Creating a dynamic web project
 
 From your Eclipse Neon:
+
 1. Create a new dynamic web project
    * Project name = `helloworld-cdi'
    * Target runtime = `Wildfly 10.0 Runtime`

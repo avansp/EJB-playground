@@ -16,9 +16,9 @@ From your Eclipse Neon:
    * Configuration = `Default configuration for Wildfly 10.0 Runtime`
 1. Click **Finish**.
 
-Note: *You can adjust your application context root to other name. However, for some reasons, Eclipse is so stubborn to create WAR output filename the same as project name. In the end, the web context name will be the same as project name. Unless if you rename the WAR filename manually before deploying.*
+**Note:** You can adjust your application context root to other name. However, for some reasons, Eclipse is so stubborn to create WAR output filename the same as project name, even after we change it explicitly in the Web Project Settings tab. In the end, the web context name will be the same as project name. Unless if you rename the WAR filename manually before deploying.
 
-This registers your URL to `http://127.0.0.1:8080/HelloWorld-CDI`.
+This registers your URL to `http://127.0.0.1:8080/helloworld-cdi`.
 
 You need to create `index.html` file as a template under the `WebContent` folder. Without this file, you will see *403 Forbidden* message if you open the root URL.
 

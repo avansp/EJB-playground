@@ -7,6 +7,8 @@ This is my sandbox to learn Enterprise Java Beans using:
 * JBoss Tool 4.4
 * Wildfly 10
 
+Subfolders are numbered from basic to more complex project; hopefuly anybody can follow them easily.
+
 # Setting up Eclipse
 
 *This project uses Eclipse Neon and Wildfly 10, which only support Java 1.8*
